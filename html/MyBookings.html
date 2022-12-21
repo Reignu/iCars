@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>iCars - My Bookings</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+        <h1>iCars</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.php">Make a booking</a></li>
+                <li><a class="current" href="MyBookings.html">My bookings</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        <form method="post" action="ShowBookings.php">
+            <table>
+                <tr>
+                    <td>Confirm email address to see bookings:</td>
+                    <td><input type="text" name="Email" size="20" > </td>
+                </tr>
+                <tr>
+                <td colspan="2"><input type="submit" value="Show My Bookings"></td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>
