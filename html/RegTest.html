@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>iCars - Register</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script>
+        function validateForm() {       // function which checks if essential   fields have been filled in
+            var Email = document.forms["myForm"]["Email"].value; // Email variable
+            var Password = document.forms["myForm"]["Password"].value; // Password variable
+            var DateOfBirth = document.forms["myForm"]["DateOfBirth"].value; // Date of Birth variable
+            console.log('1234');
+            console.log(DateOfBirth);
+            var BirthYear = DateOfBirth.getFullYear(); // variable extracting year from Date of Birth
+            console.log(BirthYear);
+            var CurrentDate = new Date(); // variable with current date of registration
+            console.log(CurrentDate);
+            var CurrentYear = CurrentDate.getFullYear(); // variable extracting year from current date
+            console.log(CurrentYear);
+            var age = CurrentYear - BirthYear; 
+            console.log(age);
+            if (Email == "" || Password == "" || age < 18) {
+                alert("Email and Password must be filled out, you must be 18 or over to register");
+                return false;
+            } // if email or password field is empty page does not continue with registration
+        }  
+    </script>
+</head>
+<body>
+<header>
+    <h1>iCars</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.php">Log In</a></li>
+            <li><a class="current" href="RegUser.php">Register</a></li>
+        </ul>
+    </nav>
+</header>
+<h2>Register User details</h2>
+
+<form name="myForm" method="POST" action="#">
+
+<table>
+ <tr>
+  <td>Email address:</td>
+  <td><input type="text" name="Email" size="20" > </td>
+ </tr>
+ <tr>
+  <td>Password:</td>
+  <td><input type="password" name="Password" placeholder="max. 8 characters" size="20" > </td>
+ </tr>
+ <tr>
+  <td>Surname:</td>
+  <td><input type="text" name="Surname" size="20" > </td>
+ </tr>
+ <tr>
+  <td>Initials:</td>
+  <td><input type="text" name="Initials" placeholder="e.g. Bob Ross, type BR" size="20" > </td>
+ </tr>
+ <tr>
+  <td>Date of Birth:</td>
+  <td><input type="date" name="DateOfBirth" size="20" > </td>
+ </tr>
+ <tr>
+  <td>Mobile No.:</td>
+  <td><input type="tel" name="PhoneNo" placeholder="format: +447321456321" size="20" > </td>
+ </tr>
+ <tr>
+  <td>Gender:</td>
+  <td><label for="male">Male
+  <input type="radio" id="male" name="Gender" value="M">
+  </label></td>
+  <td><label for="female">Female
+  <input type="radio" id="female" name="Gender" value="F">
+  </label></td>
+ </tr>
+ <tr>
+  <td>DVLA number:</td>
+  <td><input type="text" name="DvlaNo" size="20" > </td>
+ </tr>
+ 
+  
+ <td colspan="2"><input type="submit" onclick="return validateForm()" value="Register"/></td>
+ </tr>
+<tr>
+  <td colspan="2"><input type="reset" value="Clear"/></td>
+ </tr>
+</table>
+</form>
+</body>
+<footer>
+ 
+</footer>
+</html>
