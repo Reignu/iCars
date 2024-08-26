@@ -3,7 +3,7 @@
 //	$UserNo=$row[0]; // done with mysqli_fetch_row($Result) OR
 	$UserNo=$row['UserNo']; // mysqli_fetch_assoc($Result);
 
-//	it's the first element - element 0 - from the row array if using line 35
+//	it's the first element - element 0 - from the row array
 
-	echo '<br/>Associated User no is  '.$UserNo; // or 'UserNo' if line 36
-//	echo '<h3>Associated User no is  '.$UserNo.'</h3>'; // or 'UserNo' if line 36
+	echo '<br/>Associated User no is  '.$UserNo; // or 'UserNo' 
+//	echo '<h3>Associated User no is  '.$UserNo.'</h3>'; // or 'UserNo'
